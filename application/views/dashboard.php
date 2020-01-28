@@ -21,9 +21,7 @@
 		<li><a href="#beranda">Beranda</a></li>
 		<li><a href="#tentang">Tentang</a></li>
 		<li><a href="#headlines">Berita</a></li>
-		<li><a href="">Daftar</a></li>
-		<!-- <li><a href="<?= site_url("mahasiswa/login_view"); ?>">Mahasiswa</a></li> -->
-		<li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+		<li><a href="<?= site_url("loginmhs"); ?>">Login</a></li>
 	</ul>
 
 	<script type="text/javascript">

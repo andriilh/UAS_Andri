@@ -89,3 +89,9 @@ input[type=number] {
 
 
 /* material allert */
+.btn.modal-trigger {
+	display: block;
+	width: 100%;
+	padding: 30px;
+	line-height: 0px
+}

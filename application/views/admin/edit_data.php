@@ -53,8 +53,8 @@
                                                                         echo "selected";
                                                                     } ?>>Teknik Industri</option>
                                     <option value="Desain Komunikasi Visual" <?php if ($datamhs["jurusan"] == 'Desain Komunikasi Visual') {
-                                                                        echo "selected";
-                                                                    } ?>>Desain Komunikasi Visual</option>
+                                                                                    echo "selected";
+                                                                                } ?>>Desain Komunikasi Visual</option>
                                 </select>
                                 <label>Program Studi</label>
                             </div>
@@ -74,6 +74,19 @@
                                                                     } ?>>Kelas Karyawan</option>
                                 </select>
                                 <label>Kelas</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="file-field input-field">
+                                <div class="btn">
+                                    <span>File</span>
+                                    <input type="file" name="foto" value="<?= form_error('foto') ? 'is-invalid':'' ?>">
+                                    <input type="hidden" name="old_image" value="<?= $datamhs["image"]; ?>">
+                                </div>
+                                <div class="file-path-wrapper">
+                                    <input class="file-path validate" type="text" name="foto">
+                                    <?= form_error('image'); ?>
+                                </div>
                             </div>
                         </div>
                         <div class="row">

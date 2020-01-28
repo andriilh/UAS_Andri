@@ -66,4 +66,4 @@ class Mahasiswa extends CI_Controller {
         $this->load->view("materialize/script");
     }
 
-}
+}   

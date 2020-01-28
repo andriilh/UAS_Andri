@@ -1,12 +1,12 @@
 <body>
 
 	<?php
-    $this->load->view("admin/navs");
+	$this->load->view("admin/navs");
 
-    $username =  $this->session->userdata("nama_adm");
-    $nama = $this->db->query("SELECT nama FROM admin WHERE username = '" . $username . "'")->result_array();
+	$username =  $this->session->userdata("nama_adm");
+	$nama = $this->db->query("SELECT nama FROM admin WHERE username = '" . $username . "'")->result_array();
 
-    ?>
+	?>
 	<!-- Page Layout here -->
 	<div class="row">
 
@@ -35,9 +35,7 @@
 						</div>
 						<div class="row">
 							<div class="input-field col s8">
-								<input placeholder="17111322" id="npm" type="number" class="validate"
-									oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-									maxlength="12" name="npm">
+								<input placeholder="17111322" id="npm" type="number" class="validate" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="12" name="npm">
 								<label for="npm">Nomor Pokok Mahasiswa</label>
 							</div>
 						</div>
@@ -64,9 +62,19 @@
 							</div>
 						</div>
 						<div class="row">
+							<div class="file-field input-field">
+								<div class="btn">
+									<span>File</span>
+									<input type="file" name="foto">
+								</div>
+								<div class="file-path-wrapper">
+									<input class="file-path validate" type="text" name="foto">
+								</div>
+							</div>
+						</div>
+						<div class="row">
 							<div class="col s8">
-								<button class="btn waves-effect waves-light btn-large" type="submit"
-									name="action">Submit
+								<button class="btn waves-effect waves-light btn-large" type="submit" name="action">Submit
 									<i class="material-icons right">send</i>
 								</button>
 							</div>
@@ -90,6 +98,5 @@
 
 	<script type="text/javascript">
 		$('.mydatatable').DataTable();
-
 	</script>
 </body>
