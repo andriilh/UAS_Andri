@@ -19,7 +19,7 @@
             <div class="background">
                 <img src="<?= base_url("asset/img/dsktp.png"); ?>">
             </div>
-            <a href="#user"><img class="circle" src="<?= base_url("upload/" . $datamhs[0]["image"]); ?>"></a>
+            <a href="#user"><img class="circle" src="<?= base_url("asset/img/logo.png"); ?>"></a>
             <a href="#name"><span class="white-text name"><?php print_r($datamhs[0]["nama"]); ?></span></a>
             <a href="#email"><span class="white-text email"><?php print_r($datamhs[0]["npm"]); ?></span></a>
         </div>

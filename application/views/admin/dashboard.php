@@ -26,22 +26,22 @@
 					<?php echo $this->session->flashdata('message_hapus'); ?>
 				</div>
 				<div class="col s12">
-					<form action="<?= site_url("admin/tambahMahasiswa"); ?>" method="post">
+					<form action="<?= site_url("admin/tambahMahasiswa"); ?>" method="post" enctype="multipart/form-data">
 						<div class="row">
 							<div class="input-field col s8">
-								<input placeholder="Andri Ilham" id="nama" type="text" class="validate" name="nama">
+								<input placeholder="Andri Ilham" id="nama" type="text" class="validate" name="nama" required>
 								<label for="nama">Nama Lengkap</label>
 							</div>
 						</div>
 						<div class="row">
 							<div class="input-field col s8">
-								<input placeholder="17111322" id="npm" type="number" class="validate" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="12" name="npm">
+								<input placeholder="17111322" id="npm" type="number" class="validate" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="12" name="npm" required>
 								<label for="npm">Nomor Pokok Mahasiswa</label>
 							</div>
 						</div>
 						<div class="row">
 							<div class="input-field col s8">
-								<select name="prodi">
+								<select name="prodi" required>
 									<option value="" disabled selected>Pilih Program Studi</option>
 									<option value="Teknik Informatika">Teknik Informatika</option>
 									<option value="Teknik Industri">Teknik Industri</option>
@@ -52,24 +52,13 @@
 						</div>
 						<div class="row">
 							<div class="input-field col s8">
-								<select name="kelas">
+								<select name="kelas" required>
 									<option value="" disabled selected>Pilih Kelas yang diikuti</option>
 									<option value="Reguler Pagi">Reguler Pagi</option>
 									<option value="Reguler Malam">Reguler Malam</option>
 									<option value="Kelas Karyawan">Kelas Karyawan</option>
 								</select>
 								<label>Kelas</label>
-							</div>
-						</div>
-						<div class="row">
-							<div class="file-field input-field">
-								<div class="btn">
-									<span>File</span>
-									<input type="file" name="foto">
-								</div>
-								<div class="file-path-wrapper">
-									<input class="file-path validate" type="text" name="foto">
-								</div>
 							</div>
 						</div>
 						<div class="row">

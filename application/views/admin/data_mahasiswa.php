@@ -20,7 +20,6 @@
                         <th>Nama</th>
                         <th>Jurusan</th>
                         <th>Kelas</th>
-                        <th>Foto</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -34,7 +33,6 @@
                             <td><?= $tampil->nama; ?></td>
                             <td><?= $tampil->jurusan; ?></td>
                             <td><?= $tampil->kelas; ?></td>
-                            <td><img src="<?= base_url("upload/" . $tampil->image); ?>" alt="" width="64"></td>
                             <td>
                                 <a href="<?= site_url("admin/editdatamhs/" . $tampil->npm); ?>" class="btn-small tooltipped" data-position="top" data-tooltip="Sunting data"> <i class="material-icons">create</i></a>
                                 <a class="modal-trigger pink tooltipped btn-small tombol-hapus" data-position="top" data-tooltip="Hapus data" href="<?= site_url("admin/hapus/" . $tampil->npm); ?>"> <i class="material-icons">delete</i></a>

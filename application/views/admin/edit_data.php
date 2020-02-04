@@ -77,19 +77,6 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="file-field input-field">
-                                <div class="btn">
-                                    <span>File</span>
-                                    <input type="file" name="foto" value="<?= form_error('foto') ? 'is-invalid':'' ?>">
-                                    <input type="hidden" name="old_image" value="<?= $datamhs["image"]; ?>">
-                                </div>
-                                <div class="file-path-wrapper">
-                                    <input class="file-path validate" type="text" name="foto">
-                                    <?= form_error('image'); ?>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
                             <div class="col s8">
                                 <button class="btn waves-effect waves-light btn-large" type="submit" name="action">Sunting
                                     <i class="material-icons right">send</i>
