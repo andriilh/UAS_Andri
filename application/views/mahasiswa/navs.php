@@ -4,7 +4,7 @@
             <div class="nav-wrapper">
                 <a href="#!" class="brand-logo logo-nav-adm-mhs">Andri</a>
                 <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
+                <ul class="right">
                     <li><a href="<?= site_url("loginmhs/logout"); ?>">Logout<i class="material-icons right">exit_to_app</i></a></li>
                 </ul>
             </div>

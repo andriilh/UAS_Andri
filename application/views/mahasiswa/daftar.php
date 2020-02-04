@@ -8,7 +8,7 @@
             <h5 class="white-text">Daftar Mahasiswa</h5>
             <div class="section"></div>
             <div class="container">
-                <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #FFF; width: 50%;">
+                <div class="z-depth-1 grey lighten-4 form-fo">
 
                     <form class="col m12" method="post" action="<?= site_url("loginmhs/submitDaftar"); ?>">
                         <?php echo $this->session->flashdata('pesan_salahmhs'); ?>
@@ -36,7 +36,7 @@
                         <br />
                         <center>
                             <div class='row'>
-                                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>masuk</button>
+                                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Daftar</button>
                             </div>
                             <div class="row">
                                 <a href="<?= site_url(); ?>" class="col s12 btn btn-large waves-effect indigo lighten-5 indigo-text">Batal</a>

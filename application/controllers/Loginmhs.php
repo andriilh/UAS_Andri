@@ -71,19 +71,28 @@ class Loginmhs extends CI_Controller {
         );
         $where = array('npm' => $npm);
         $cek = $this->M_login->ceklogin('mahasiswa', $where)->num_rows();
+        $cek_mhs = $this->M_login->ceklogin('login_mhs', $where)->num_rows();
         if($pass1 == $pass2) {
-            if($cek > 0){
-                $this->M_admin->tambah_data('login_mhs', $data);
-                $this->session->set_flashdata('pesan_salahmhs', '<div class="materialert teal accent-3">
-                <div class="material-icons">check</div>
-                Akun Berhasil dibuat, silahkan login
-            </div>');
-                redirect("loginmhs/daftar");
+            if($cek_mhs == 0){
+                if($cek > 0){
+                    $this->M_admin->tambah_data('login_mhs', $data);
+                    $this->session->set_flashdata('pesan_salahmhs', '<div class="materialert teal accent-3">
+                    <div class="material-icons">check</div>
+                    Akun Berhasil dibuat, silahkan login
+                </div>');
+                    redirect("loginmhs/daftar");
+                } else {
+                    $this->session->set_flashdata('pesan_salahmhs', '<div class="materialert pink">
+                    <div class="material-icons">error_outline</div>
+                    NPM anda tidak ditemukan
+                </div>');
+                    redirect('loginmhs/daftar');
+                }
             } else {
                 $this->session->set_flashdata('pesan_salahmhs', '<div class="materialert pink">
-                <div class="material-icons">error_outline</div>
-                NPM anda tidak ditemukan
-            </div>');
+                    <div class="material-icons">error_outline</div>
+                    NPM sudah terdaftar
+                </div>');
                 redirect('loginmhs/daftar');
             }
         } else {
